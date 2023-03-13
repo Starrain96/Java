@@ -12,10 +12,12 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
 import 자바DB연결.BookVO;
+import 자바DB연결.StarDao;
+import 자바DB연결.StarVO;
 
 public class InfoUI {
 
-	public void open(BookVO bag) {
+	public void open(BookVO bag, String id) {
 		System.out.println(bag);
 		// public static void main(String[] args) {
 		JFrame f = new JFrame();
@@ -68,15 +70,21 @@ public class InfoUI {
 		});
 
 		// 평가하기 클릭
-		b2.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
-				StarUI star = new StarUI();
-				star.open(bag);
-			}
-		});
+				b2.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						StarVO bag2 = new StarVO();
+						StarDao dao = new StarDao();
+						StarUI star = new StarUI();
+						bag2.setId(id);
+						bag2.setNo(bag.getNo());
+						int result = dao.check(bag2);
+						if (result == 0) {
+							dao.set(bag2);
+						}
+						star.open(bag2);
+					}
+				});
 		ImageIcon icon = new ImageIcon(bag.getImg());
 		Font font = new Font("궁서", Font.BOLD, 25);
 		Font font2 = new Font("맑은 고딕", Font.BOLD, 20);

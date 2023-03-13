@@ -18,7 +18,7 @@ import 자바DB연결.InfoVO;
 public class RankUI {
 	static int index = 1;
 
-	public static void main(String[] args) {
+	public void open(String id) {
 		JFrame f = new JFrame("메인페이지");
 		f.setSize(1000, 800);
 		Font font = new Font("맑은 고딕", Font.BOLD, 25);
@@ -222,7 +222,8 @@ public class RankUI {
 				BookDAO dao = new BookDAO();
 				InfoUI info = new InfoUI();
 				BookVO bag = dao.one(index);
-				info.open(bag);
+				
+				info.open(bag,id);
 			}
 		});
 
@@ -232,7 +233,7 @@ public class RankUI {
 				BookDAO dao = new BookDAO();
 				InfoUI info = new InfoUI();
 				BookVO bag = dao.one(index + 1);
-				info.open(bag);
+				info.open(bag,id);
 			}
 		});
 
@@ -242,9 +243,26 @@ public class RankUI {
 				BookDAO dao = new BookDAO();
 				InfoUI info = new InfoUI();
 				BookVO bag = dao.one(index + 2);
-				info.open(bag);
+				info.open(bag,id);
 			}
 		});
+		
+
+		JButton b5 = new JButton("마이페이지");
+		b5.setFont(font);
+		b5.setBackground(Color.pink);
+		b5.setBounds(750, 10, 200, 50);
+		
+		b5.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				MyPageUI page = new MyPageUI();
+				page.open(id);
+			}
+		});
+		
+		f.add(b5);
 
 		f.add(l1);
 		f.add(r1);

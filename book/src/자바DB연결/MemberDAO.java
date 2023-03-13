@@ -176,7 +176,7 @@ public class MemberDAO {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("2. 오라클 연결 성공.");
 
-			String sql = "select * from hr.MEMBER where id=? and pw=?";
+			String sql = "select * from hr.MEMBER_T where id=? and pw=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, bag.getId());
 			ps.setString(2, bag.getPw());

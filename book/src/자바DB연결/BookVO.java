@@ -65,12 +65,12 @@ public class BookVO {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	
 	@Override
 	public String toString() {
 		return "BookVO [no=" + no + ", title=" + title + ", img=" + img + ", info=" + info + ", writer=" + writer
 				+ ", content=" + content + ", publisher=" + publisher + ", genre=" + genre + ", rank=" + rank + "]";
 	}
+	
 	
 	
 }
