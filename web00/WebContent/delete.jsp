@@ -1,3 +1,5 @@
+<%@page import="multi.MemberDAO3"%>
+<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 브라우저가 보낸 데이터를 받야아 함. ==> 자바로 짜야함. -->
@@ -8,6 +10,9 @@
 // tomcat 은 미리 reqeust 를 만들어서 내장시켜놨어요..!
 
 String id = request.getParameter("id");
+
+MemberDAO3 dao = new MemberDAO3();
+dao.delete(id);
 
 %>
 <!DOCTYPE html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-	alert('회원탈퇴 페이지입니다. 반갑습니다.!')
+	alert('게시판수정 페이지입니다. 반갑습니다.!')
 </script>
 <style type="text/css">
 body { /* 컨트롤 + / - 자동주석, 태그선택! */
@@ -31,20 +31,24 @@ button {
 </style>
 </head>
 <body>
-	<h3>회원탈퇴 페이지</h3>
+	<h3>게시판수정 페이지</h3>
 	<hr>
 	<a href="member.html">
 		<button id="b1">첫페이지로</button>
 	</a>
-	<form action="delete.jsp"> 
+	<form action="update2.jsp"> 
 		<table border="1">
 			<tr>
-				<td class="t1">탈퇴할 아이디 :</td>
-				<td><input name="id"></td>
+				<td class="t1">당신이 수정을 원하는 번호는 :</td>
+				<td><input name="no"></td>
+			</tr>
+			<tr>
+				<td class="t1">당신이 수정을 원하는 내용은 :</td>
+				<td><input name="content"></td>
 			</tr>
 			<tr>
 				<td colspan="2" class="t1">
-					<button id="b2">탈퇴할 아이디 데이터 전송</button>
+					<button id="b2">게시판수정 데이터 전송</button>
 				</td>
 			</tr>
 		</table>

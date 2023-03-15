@@ -1,3 +1,6 @@
+<%@page import="multi.MemberDAO3"%>
+<%@page import="com.sun.org.apache.bcel.internal.generic.NEW"%>
+<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 브라우저가 보낸 데이터를 받야아 함. ==> 자바로 짜야함. -->
@@ -11,6 +14,20 @@ String id = request.getParameter("id");
 String pw = request.getParameter("pw");
 String name = request.getParameter("name");
 String tel = request.getParameter("tel");
+
+//가방 만들어서 셋!
+//jsp 에서 자동 import - 해당클래스 클릭한 다음 ctrl + shift + m
+MemberVO bag = new MemberVO();
+bag.setId(id);
+bag.setPw(pw);
+bag.setName(name);
+bag.setTel(tel);
+
+//dao
+
+MemberDAO3 dao = new MemberDAO3();
+dao.insert(bag);
+
 %>
 <!DOCTYPE html>
 <html>
