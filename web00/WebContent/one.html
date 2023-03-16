@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
-	//alert('게시판수정 페이지입니다. 반갑습니다.!')
-</script>
+
 <style type="text/css">
 body { /* 컨트롤 + / - 자동주석, 태그선택! */
-	background: #18de02;
+	background: #037bfc;
 }
 
 button {
@@ -24,31 +22,38 @@ button {
 #b1 { /* #은 아이디 선택!, 특정한 것 한 개만 선택! */
 	color: red;
 }
-#b2{
+
+#b2 {
 	color: blue;
-	
 }
 </style>
 </head>
 <body>
-	<h3>게시판수정 페이지</h3>
+
+	<h3>회원 검색 페이지</h3>
 	<hr>
-	<a href="bbs.html">
-		<button id="b1">첫페이지로</button>
+	<!--a태그는 무조건 get방식 요청 -->
+	<a href="http://localhost:8888/web00/one.jsp?id=apple2">
+		<button style="background: pink">apple2</button>
 	</a>
-	<form action="update2.jsp"> 
+	<a href="http://localhost:8888/web00/one.jsp?id=apple3">
+		<button style="background: pink">apple3</button>
+	</a>
+	<a href="http://localhost:8888/web00/one.jsp?id=apples1">
+		<button style="background: pink">apples1</button>
+	</a>
+	<hr>
+	
+
+	<form action="one.jsp">
 		<table border="1">
 			<tr>
-				<td class="t1">당신이 수정을 원하는 번호는 :</td>
-				<td><input name="no"></td>
-			</tr>
-			<tr>
-				<td class="t1">당신이 수정을 원하는 내용은 :</td>
-				<td><input name="content"></td>
+				<td class="t1">검색할 아이디 :</td>
+				<td><input name="id"></td>
 			</tr>
 			<tr>
 				<td colspan="2" class="t1">
-					<button id="b2">게시판수정 데이터 전송</button>
+					<button id="b2">검색할 아이디 데이터 전송</button>
 				</td>
 			</tr>
 		</table>

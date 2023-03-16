@@ -1,3 +1,5 @@
+<%@page import="multi.BbsDao"%>
+<%@page import="multi.BbsVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 브라우저가 보낸 데이터를 받야아 함. ==> 자바로 짜야함. -->
@@ -9,6 +11,14 @@
 
 String no = request.getParameter("no");
 // JSP 안에 만들어진 변수는 서버의 RAM에 저장한다.
+
+
+BbsVO bag = new BbsVO();
+bag.setNo(no);
+
+BbsDao dao = new BbsDao();
+dao.delete(no);
+
 %>
 <!DOCTYPE html>
 <html>

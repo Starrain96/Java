@@ -1,3 +1,5 @@
+<%@page import="multi.BbsDao"%>
+<%@page import="multi.BbsVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 브라우저가 보낸 데이터를 받야아 함. ==> 자바로 짜야함. -->
@@ -11,6 +13,14 @@ String no = request.getParameter("no");
 String title = request.getParameter("title");
 String content = request.getParameter("content");
 String writer = request.getParameter("writer");
+
+BbsVO bag = new BbsVO();
+bag.setTitle(title);
+bag.setContent(content);
+bag.setWriter(writer);
+
+BbsDao dao = new BbsDao();
+dao.insert(bag);
 %>
 <!DOCTYPE html>
 <html>
@@ -25,7 +35,6 @@ body {
 </head>
 <body>회원가입 요청되었음.
 <hr color = "red">
-가입한 no : <%= no %> <br>
 가입한 title : <%= title %> <br>
 가입한 content : <%= content %> <br>
 가입한 writer : <%= writer %>

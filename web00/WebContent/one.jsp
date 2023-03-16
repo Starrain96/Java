@@ -1,5 +1,5 @@
-<%@page import="multi.BbsDao"%>
-<%@page import="multi.BbsVO"%>
+<%@page import="multi.MemberVO"%>
+<%@page import="multi.MemberDAO3"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 브라우저가 보낸 데이터를 받야아 함. ==> 자바로 짜야함. -->
@@ -9,15 +9,10 @@
 //HttpServletRequest request = new HttpServletRequest();
 // tomcat 은 미리 reqeust 를 만들어서 내장시켜놨어요..!
 
-String no = request.getParameter("no");
-String content = request.getParameter("content");
-
-BbsVO bag = new BbsVO();
-bag.setNo(no);
-bag.setContent(content);
-
-BbsDao dao = new BbsDao();
-dao.update(bag);
+String id = request.getParameter("id");
+// JSP 안에 만들어진 변수는 서버의 RAM에 저장한다.
+MemberDAO3 dao = new MemberDAO3();
+MemberVO bag2 =dao.one(id);
 %>
 <!DOCTYPE html>
 <html>
@@ -30,9 +25,19 @@ body {
 }
 </style>
 </head>
-<body>게시판 수정 요청되었음.
-<hr color = "red">
-수정할 게시판 번호 : <%= no %> <br>
-수정할 내용 : <%= content %> 
+<body>
+	회원 <%= bag2.getId() %> 정보 요청 받음!
+	<hr color="red">
+	당신이 검색을 원하는 번호는
+	<%=id%>
+	<hr color="red">
+	검색한 아이디 : <%= bag2.getId() %>
+	<br> 
+	검색한 비밀번호 : <%= bag2.getPw() %>
+	<br> 
+	검색한 이름 :<%= bag2.getName() %>
+	<br> 
+	검색한 전화번호 :<%= bag2.getTel() %>
+
 </body>
 </html>
