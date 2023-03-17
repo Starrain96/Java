@@ -119,10 +119,10 @@ public class ProductDAO {
 
 	}
 
-	public MemberVO one(String id) {
+	public ProductVO one(String id) {
 
 		ResultSet rs = null; // 항목명이랑 결과를 담고 있는 테이블이다.
-		MemberVO bag = new MemberVO();
+		ProductVO bag = new ProductVO();
 
 		try {
 			// 1. 오라클 11g와 연결할 부품 설정
@@ -136,7 +136,7 @@ public class ProductDAO {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("2. mySQL 연결 성공.");
 
-			String sql = "select * from member where id=?";
+			String sql = "select * from product where id=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, id);
 			System.out.println("3. SQL문 부품(객체)으로 만들어주기.");
@@ -147,17 +147,20 @@ public class ProductDAO {
 
 			if (rs.next()) { // 검색결과가 있으면 TRUE 없으면 false
 				System.out.println("검색결과 있음 성공!");
-				String id2 = rs.getString(1);
-				String pw = rs.getString(2);
-				String name = rs.getString(3);
-				String tel = rs.getString(4);
-				System.out.println(id2 + "  " + pw + "  " + name + "  " + tel);
+				String id2 = rs.getString("id");
+				String name = rs.getString("name");
+				String content = rs.getString("content");
+				int price = rs.getInt("price");
+				String company = rs.getString("company");
+				String img = rs.getString("img");
 
-				bag = new MemberVO();
-				bag.setId(id2);
-				bag.setPw(pw);
-				bag.setName(name);
-				bag.setTel(tel);
+				bag = new ProductVO();
+				bag.setId(id);
+				bag.setName(name);;
+				bag.setContent(content);
+				bag.setPrice(price);
+				bag.setCompany(company);
+				bag.setImg(img);
 
 			}
 			System.out.println("검색 결과 없음.");
@@ -184,7 +187,7 @@ public class ProductDAO {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("2. mySQL 연결 성공.");
 
-			String sql = "select * from member where id=? and pw=?";
+			String sql = "select * from product where id=? and pw=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, bag.getId());
 			ps.setString(2, bag.getPw());
@@ -206,15 +209,15 @@ public class ProductDAO {
 		return result;
 	}
 
-	public ArrayList<MemberVO> list() {
+	public ArrayList<ProductVO> list() {
 
 		ResultSet rs = null; // 항목명이랑 결과를 담고 있는 테이블이다.
-		MemberVO bag = new MemberVO();
+		ProductVO bag = new ProductVO();
 
 		// 가방들 넣어줄 큰 컨테이너 역활을 부품이 필요하다.
 		// ArrayList
 
-		ArrayList<MemberVO> list = new ArrayList<>();
+		ArrayList<ProductVO> list = new ArrayList<>();
 
 		try {
 			// 1. 오라클 11g와 연결할 부품 설정
@@ -228,7 +231,7 @@ public class ProductDAO {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("2. mySQL 연결 성공.");
 
-			String sql = "select * from member";
+			String sql = "select * from product";
 			PreparedStatement ps = con.prepareStatement(sql);
 
 			System.out.println("3. SQL문 부품(객체)으로 만들어주기.");
@@ -239,22 +242,29 @@ public class ProductDAO {
 
 			while (rs.next()) { // 검색결과가 있으면 TRUE 없으면 false
 				// System.out.println("검색결과 있음 성공!");
-				String id2 = rs.getString(1);
-				String pw = rs.getString(2);
-				String name = rs.getString(3);
-				String tel = rs.getString(4);
+				String id2 = rs.getString("id");
+				String name = rs.getString("name");
+				String content = rs.getString("content");
+				int price = rs.getInt("price");
+				String company = rs.getString("company");
+				String img = rs.getString("img");
 				// System.out.println(id2 + " " + pw + " " + name + " " + tel);
 
-				bag = new MemberVO();
+				bag = new ProductVO();
 				bag.setId(id2);
-				bag.setPw(pw);
-				bag.setName(name);
-				bag.setTel(tel);
+				bag.setName(name);;
+				bag.setContent(content);
+				bag.setPrice(price);
+				bag.setCompany(company);
+				bag.setImg(img);
+				
 
 				list.add(bag);
 			}
 			System.out.println("검색 결과 없음.");
-
+			ps.close();
+			rs.close();
+			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

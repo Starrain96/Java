@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>책 정보</title>
+<style>
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f2f2f2;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	margin: 0;
+}
+
+.btn {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.btn:hover {
+	background-color: #555;
+}
+
+.post {
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.post h2 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.post p {
+	font-size: 14px;
+	color: #666;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.post a {
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+}
+
+.post a:hover {
+	text-decoration: underline;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #fff;
+	color: #333;
+	margin-right: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.pagination a:hover {
+	background-color: #f2f2f2;
+}
+
+.pagination .active {
+	background-color: #333;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>책 종류</h1>
+			<a href="booklist.jsp" class="btn">책 리스트 불러오기</a>
+		</div>
+		<div class="header">
+			<h1>검색하기</h1>
+			<form action="bookone.jsp">
+				<table border="1">
+					<tr>
+						<td class="t1">검색할 책 고유번호 :</td>
+						<td><input name="no"></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="t1">
+							<button id="b2" class="btn">책 번호 데이터 전송</button>
+						</td>
+					</tr>
+				</table>
+				<!-- 입력한 값들이 서버(톰킷)으로 전달될때는 form태그 안에 있어야 함. -->
+			</form>
+		</div>
+
+		<div class="header">
+			<h1>삭제하기</h1>
+			<form action="bookdelete.jsp">
+				<table border="1">
+					<tr>
+						<td class="t1">삭제할 책 고유 번호 :</td>
+						<td><input name="no"></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="t1">
+							<button id="b2" class="btn">게시판 번호 데이터 전송</button>
+						</td>
+					</tr>
+				</table>
+				<!-- 입력한 값들이 서버(톰킷)으로 전달될때는 form태그 안에 있어야 함. -->
+			</form>
+		</div>
+		<div class="header">
+			<h1>수정하기</h1>
+			<form action="bookupdate.jsp">
+				<table border="1">
+					<tr>
+						<td class="t1">당신이 수정을 원하는 번호는 :</td>
+						<td><input name="no"></td>
+					</tr>
+					<tr>
+						<td class="t1">당신이 수정을 원하는 내용은 :</td>
+						<td><input name="content"></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="t1">
+							<button id="b2" class="btn">게시판수정 데이터 전송</button>
+						</td>
+					</tr>
+				</table>
+				<!-- 입력한 값들이 서버(톰킷)으로 전달될때는 form태그 안에 있어야 함. -->
+			</form>
+
+		</div>
+		<div class="header">
+			<h1>추가하기</h1>
+			<form action="bookinsert.jsp">
+				<table border="1">
+					<tr>
+						<td class="t1">책 고유번호 :</td>
+						<td><input name="no" type="number"></td>
+					</tr>
+					<tr>
+						<td class="t1">제목 :</td>
+						<td><input name="title"></td>
+					</tr>
+					<tr>
+						<td class="t1">내용 :</td>
+						<td><input name="content"></td>
+					</tr>
+					<tr>
+						<td class="t1">저자/옮긴이 :</td>
+						<td><input name="writer"></td>
+					</tr>
+					<tr>
+						<td class="t1">이미지 :</td>
+						<td><input name="img" type="file"></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="t1">
+							<button id="b2" class="btn">책 데이터 전송</button>
+						</td>
+					</tr>
+				</table>
+				<!-- 입력한 값들이 서버(톰킷)으로 전달될때는 form태그 안에 있어야 함. -->
+			</form>
+		</div>
+</body>
