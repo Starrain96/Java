@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function login() {
+		id = document.getElementById("user").value
+		pw = document.getElementById("pw").value
+
+		resultTag = document.getElementById("result")
+		//id가 result인 태그를 가지고 와주세요! <div id= result> </div>
+		if (id == 'root' && pw == '1234') {
+			resultTag.innerHTML = '<img src=img/yes.jpg width=250 height=200>'
+		} else {
+			resultTag.innerHTML = '<img src=img/no.jpg width=250 height=200>'
+		}
+	}
+
+	function age() {
+		year = parseInt(document.getElementById("age").value)
+		resultTag = document.getElementById("result")
+		resultTag.innerHTML = '나이는' + (2023 - year) + '살 입니다.'
+
+	}
+	function rec() {
+		w = parseFloat(document.getElementById("w").value)
+		h = parseFloat(document.getElementById("h").value)
+		resultTag = document.getElementById("result")
+		resultTag.innerHTML = '사각형의 넓이는' + (w * h) + '입니다.'
+	}
+
+	function idcheck() {
+		idValue = document.getElementById("id").value
+
+		result = "";
+
+		if (idValue.length >= 5) {
+			result = '5글자 이상이므로 가입가능합니다. <img src=img/yes.jpg width=250 height=200>'
+		} else {
+			result = '5글자 이하이므로 가입불가능합니다. <img src=img/no.jpg width=250 height=200>'
+		}
+		resultTag = document.getElementById("result")
+		resultTag.innerHTML = result;
+
+	}
+
+	function pwcheck() {
+		pw2Value = document.getElementById("pw2").value
+		pw3Value = document.getElementById("pw3").value
+
+		result = "";
+
+		if (pw2Value == pw3Value) {
+			//result = '비밀번호가 동일합니다. <img src=img/yes.jpg width=250 height=200>'
+			location.href = "http://www.naver.com"
+		} else {
+			//result = '비밀번호가 다릅니다. <img src=img/no.jpg width=250 height=200>'
+			location.href = "http://www.daum.net"
+		}
+		resultTag = document.getElementById("result")
+		resultTag.innerHTML = result;
+	}
+</script>
+</head>
+<body>
+	아이디 :
+	<input id="user" value="root">
+	<br> 비밀번호 :
+	<input id="pw" value="1234">
+	<button onclick="login()">로그인 처리</button>
+
+	<hr>
+	태어난 연도 :
+	<input id="age" value="2000">
+	<br>
+	<button onclick="age()">나이 계산 처리</button>
+
+	<hr>
+	가로 길이 :
+	<input id="w" value="11.1">
+	<br> 세로 길이:
+	<input id="h" value="11.1">
+	<button onclick="rec()">사각형의 면적 계산</button>
+
+	<hr color="red">
+
+	아이디 :
+	<input id="id">
+	<button onclick="idcheck()">글자수 체크</button>
+	<br> 비밀번호 :
+	<input id="pw2">
+	<br> 비밀번호2 :
+	<input id="pw3">
+	<button onclick="pwcheck()">패스워드동일</button>
+
+	<hr color="red">
+	<div id="result"
+		style="color: red; background: yellow; width: 500px; height: 50px; font-size: 30px">
+		결과넣는 곳.</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function bag() {
+	name=document.getElementById("name").value
+	company=document.getElementById("company").value
+	level=document.getElementById("level").value
+	gender=document.getElementById("gender").value
+	if (gender=='남'){
+			result = '<img src=img/man.png width=250 height=200>'
+		} else {
+			result = '<img src=img/woman.png width=250 height=200>'
+		}
+	resultTag = document.getElementById("result")
+	resultTag.innerHTML = result+company+'회사에 '+level+'으로 있는 '+name+'입니다.'
+}
+
+</script>
+</head>
+<body>
+이름 : <input id="name"> <br>
+회사명 : <input id="company"> <br>
+직책 : <input id="level"> <br>
+성별 : <input id = "gender"><br>
+<button onclick="bag()">확인</button>
+<div id="result"
+	style="color: red; 
+	background: yellow; 
+	width: 500px; 
+	height: 50px; 
+	font-size: 30px">
+		결과</div>
+</body>
+</html>
