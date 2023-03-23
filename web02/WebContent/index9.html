@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			f = $('#food').val()
+			w = $('#where').val()
+			alert("당신이 먹고 싶은 음식은" + f + "이고, 가고 싶은 곳은" + w + "군요.")
+		})
+		
+		$('#b2').click(function() {
+			s = $('#site').val()
+			if (s=='movie') {
+				location.href="http://cgv.co.kr"
+			} else {
+				location.href="https://www.aircanada.com/kr/ko/aco/home/book/travels.html#/"
+			}
+			
+			
+			
+		})
+	})
+</script>
+</head>
+<body>
+	먹고 싶은 음식 : <input id="food" value="커피"><br> 
+	가고 싶은 곳 : <input id="where" value="제주도">
+	<button id="b1">출력 버튼</button>
+
+	<hr color=blue>
+
+	현재 내가 제일 많이 들어가는 사이트 :
+	<input id="site" value="naver">
+	<button id="b2">사이트로 이등</button>
+</body>
+</html>

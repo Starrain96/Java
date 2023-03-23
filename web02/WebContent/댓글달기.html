@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() { //body태그 부분을 ram에 dom tree로 읽어와서 준비가 되면, 
+		$('#b1').click(function() {
+			t1 = $('#text1').val()
+			divTag = $('#result')
+				//divTag.text("우산 꼭 챙기세요.") //태그사이에 글자만 넣을 때!
+			divTag.append("<img src=img/cat.png width=50 height=50>"+t1+"<br>")  // .append 는 붙이기! 뒤에다가!
+		}) //b1
+	})
+</script>
+</head>
+<body>
+입력 내용:  <input id="text1" value="" style="background: yellow"><br>
+<button id="b1">글자 추가</button>
+<hr color="red">
+<div id="result"></div>
+</body>
+</html>
