@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(
+				function() {
+					$.ajax({
+						url : "data/dataset2.xml",
+						success : function(doc) {
+							//alert("xml 요청성공" + doc)
+							list = $(doc).find('record') //find의 결과는 항상 여러개(배열)
+							//alert(list.length)
+							for (i = 0; i < list.length; i++) {
+								//console.log($(list[i]).find('name').text())
+								//console.log($(list[i]).find('tel').text())
+								code = $(list[i]).find('code').text()
+								name = $(list[i]).find('name').text()
+								latitude = $(list[i]).find('latitude').text()
+								longitude = $(list[i]).find('longitude').text()
+								$('#result').append(
+										code + ", " + name + ", " + latitude
+												+ ", " + longitude + "<br>")
+								//받은 데이터를 추출해서 db에 저장해두고 싶은 경우
+								//브라우저 -- 웹서버 -- DB
+								//브라우저 받은 데이터를 웹서버에게 전달!
+								//비동기 통신이 필요함.
+								$.ajax({
+									url : "airport.jsp",
+									//async: "false",
+									data : {
+										code : code,
+										name : name,
+										latitude : latitude,
+										longitude : longitude
+									},
+									success : function() {
+										console.log('넣기 성공~!')
+									} //success
+								})//ajax 
+							}//for
+						}//success
+					})//ajax
+				})//b1
+	})
+</script>
+</head>
+<body style="background: #a3b6d4">
+	<hr>
+	<button id="b1" style="background: #c9757c">XML받아기(Airport)</button>
+	<hr color="red">
+	<div id="result"></div>
+
+</body>
+</html>

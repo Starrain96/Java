@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset2>
+	<record>
+		<code>YVV</code>
+		<name>Wiarton Airport</name>
+		<latitude>CYVV</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>ZBM</code>
+		<name>Bromont (Roland Desourdy) Airport</name>
+		<latitude>CZBM</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>YMH</code>
+		<name>Mary's Harbour Airport</name>
+		<latitude>CYMH</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>YGR</code>
+		<name>Îles-de-la-Madeleine Airport</name>
+		<latitude>CYGR</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>BBQ</code>
+		<name>Codrington Airport</name>
+		<latitude>TAPH</latitude>
+		<longitude>AG</longitude>
+	</record>
+	<record>
+		<code>SNW</code>
+		<name>Thandwe Airport</name>
+		<latitude>VYTD</latitude>
+		<longitude>MM</longitude>
+	</record>
+	<record>
+		<code>ZNE</code>
+		<name>Newman Airport</name>
+		<latitude>YNWN</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>PDK</code>
+		<name>DeKalb Peachtree Airport</name>
+		<latitude>KPDK</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>TCA</code>
+		<name>Tennant Creek Airport</name>
+		<latitude>YTNK</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>HEX</code>
+		<name>Herrera Airport</name>
+		<latitude>MDHE</latitude>
+		<longitude>DO</longitude>
+	</record>
+	<record>
+		<code>CSO</code>
+		<name>Cochstedt Airport</name>
+		<latitude>EDBC</latitude>
+		<longitude>DE</longitude>
+	</record>
+	<record>
+		<code>ARZ</code>
+		<name>N'zeto Airport</name>
+		<latitude>FNZE</latitude>
+		<longitude>AO</longitude>
+	</record>
+	<record>
+		<code>AMT</code>
+		<name>Amata Airport</name>
+		<latitude>YAMT</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>SDP</code>
+		<name>Sand Point Airport</name>
+		<latitude>PASD</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>YON</code>
+		<name>Yongphulla Airport</name>
+		<latitude>VQTY</latitude>
+		<longitude>BT</longitude>
+	</record>
+	<record>
+		<code>AYA</code>
+		<name>Ayapel Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>CO</longitude>
+	</record>
+	<record>
+		<code>LJG</code>
+		<name>Lijiang Airport</name>
+		<latitude>ZPLJ</latitude>
+		<longitude>CN</longitude>
+	</record>
+	<record>
+		<code>TPH</code>
+		<name>Tonopah Airport</name>
+		<latitude>KTPH</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>BRR</code>
+		<name>Barra Airport</name>
+		<latitude>EGPR</latitude>
+		<longitude>GB</longitude>
+	</record>
+	<record>
+		<code>HPN</code>
+		<name>Westchester County Airport</name>
+		<latitude>KHPN</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>YCW</code>
+		<name>Chilliwack Airport</name>
+		<latitude>CYCW</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>ROC</code>
+		<name>Greater Rochester International Airport</name>
+		<latitude>KROC</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>ESR</code>
+		<name>Ricardo García Posada Airport</name>
+		<latitude>SCES</latitude>
+		<longitude>CL</longitude>
+	</record>
+	<record>
+		<code>PTH</code>
+		<name>Port Heiden Airport</name>
+		<latitude>PAPH</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>LIX</code>
+		<name>Likoma Island Airport</name>
+		<latitude>FWLK</latitude>
+		<longitude>MW</longitude>
+	</record>
+	<record>
+		<code>HPT</code>
+		<name>Hampton Municipal Airport</name>
+		<latitude>KHPT</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>EIK</code>
+		<name>Yeysk Airport</name>
+		<latitude>URKE</latitude>
+		<longitude>RU</longitude>
+	</record>
+	<record>
+		<code>CSK</code>
+		<name>Cap Skirring Airport</name>
+		<latitude>GOGS</latitude>
+		<longitude>SN</longitude>
+	</record>
+	<record>
+		<code>JLR</code>
+		<name>Jabalpur Airport</name>
+		<latitude>VAJB</latitude>
+		<longitude>IN</longitude>
+	</record>
+	<record>
+		<code>AIV</code>
+		<name>George Downer Airport</name>
+		<latitude>KAIV</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>MEX</code>
+		<name>Licenciado Benito Juarez International Airport</name>
+		<latitude>MMMX</latitude>
+		<longitude>MX</longitude>
+	</record>
+	<record>
+		<code>BKM</code>
+		<name>Bakalalan Airport</name>
+		<latitude>WBGQ</latitude>
+		<longitude>MY</longitude>
+	</record>
+	<record>
+		<code>ALU</code>
+		<name>Alula Airport</name>
+		<latitude>HCMA</latitude>
+		<longitude>SO</longitude>
+	</record>
+	<record>
+		<code>IKS</code>
+		<name>Tiksi Airport</name>
+		<latitude>UEST</latitude>
+		<longitude>RU</longitude>
+	</record>
+	<record>
+		<code>SLV</code>
+		<name>Shimla Airport</name>
+		<latitude>VISM</latitude>
+		<longitude>IN</longitude>
+	</record>
+	<record>
+		<code>CCW</code>
+		<name>Cowell Airport</name>
+		<latitude>YCWL</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>CDJ</code>
+		<name>Conceição do Araguaia Airport</name>
+		<latitude>SBAA</latitude>
+		<longitude>BR</longitude>
+	</record>
+	<record>
+		<code>TJV</code>
+		<name>Tanjore Air Force Base</name>
+		<latitude>VOTJ</latitude>
+		<longitude>IN</longitude>
+	</record>
+	<record>
+		<code>BNA</code>
+		<name>Nashville International Airport</name>
+		<latitude>KBNA</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>SOA</code>
+		<name>Sóc Trăng Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>VN</longitude>
+	</record>
+	<record>
+		<code>HKA</code>
+		<name>Blytheville Municipal Airport</name>
+		<latitude>KHKA</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>EGP</code>
+		<name>Maverick County Memorial International Airport</name>
+		<latitude>5T9</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>LDV</code>
+		<name>Landivisiau Air Base</name>
+		<latitude>LFRJ</latitude>
+		<longitude>FR</longitude>
+	</record>
+	<record>
+		<code>HSJ</code>
+		<name>Shangjie Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>CN</longitude>
+	</record>
+	<record>
+		<code>JOE</code>
+		<name>Joensuu Airport</name>
+		<latitude>EFJO</latitude>
+		<longitude>FI</longitude>
+	</record>
+	<record>
+		<code>URG</code>
+		<name>Rubem Berta Airport</name>
+		<latitude>SBUG</latitude>
+		<longitude>BR</longitude>
+	</record>
+	<record>
+		<code>TIY</code>
+		<name>Tidjikja Airport</name>
+		<latitude>GQND</latitude>
+		<longitude>MR</longitude>
+	</record>
+	<record>
+		<code>SYJ</code>
+		<name>Sirjan Airport</name>
+		<latitude>OIKY</latitude>
+		<longitude>IR</longitude>
+	</record>
+	<record>
+		<code>CAR</code>
+		<name>Caribou Municipal Airport</name>
+		<latitude>KCAR</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>ITO</code>
+		<name>Hilo International Airport</name>
+		<latitude>PHTO</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>MLL</code>
+		<name>Marshall Don Hunter Sr Airport</name>
+		<latitude>PADM</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>ESF</code>
+		<name>Esler Regional Airport</name>
+		<latitude>KESF</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>KKP</code>
+		<name>Koolburra Airport</name>
+		<latitude>YKLB</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>BJI</code>
+		<name>Bemidji Regional Airport</name>
+		<latitude>KBJI</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>AAG</code>
+		<name>Arapoti Airport</name>
+		<latitude>SSYA</latitude>
+		<longitude>BR</longitude>
+	</record>
+	<record>
+		<code>LOA</code>
+		<name>Lorraine Airport</name>
+		<latitude>YLOR</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>BKL</code>
+		<name>Burke Lakefront Airport</name>
+		<latitude>KBKL</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>HPE</code>
+		<name>Hope Vale Airport</name>
+		<latitude>YHPV</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>TCE</code>
+		<name>Tulcea Airport</name>
+		<latitude>LRTC</latitude>
+		<longitude>RO</longitude>
+	</record>
+	<record>
+		<code>HUJ</code>
+		<name>Stan Stamper Municipal Airport</name>
+		<latitude>KHHW</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>KRB</code>
+		<name>Karumba Airport</name>
+		<latitude>YKMB</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>YKY</code>
+		<name>Kindersley Airport</name>
+		<latitude>CYKY</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>LLN</code>
+		<name>Kelila Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>ID</longitude>
+	</record>
+	<record>
+		<code>YGX</code>
+		<name>Gillam Airport</name>
+		<latitude>CYGX</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>OOM</code>
+		<name>Cooma Snowy Mountains Airport</name>
+		<latitude>YCOM</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>BHD</code>
+		<name>George Best Belfast City Airport</name>
+		<latitude>EGAC</latitude>
+		<longitude>GB</longitude>
+	</record>
+	<record>
+		<code>PHE</code>
+		<name>Port Hedland International Airport</name>
+		<latitude>YPPD</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>YRV</code>
+		<name>Revelstoke Airport</name>
+		<latitude>CYRV</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>KXE</code>
+		<name>P C Pelser Airport</name>
+		<latitude>FAKD</latitude>
+		<longitude>ZA</longitude>
+	</record>
+	<record>
+		<code>MTB</code>
+		<name>Montelibano Airport</name>
+		<latitude>SKML</latitude>
+		<longitude>CO</longitude>
+	</record>
+	<record>
+		<code>ZTH</code>
+		<name>Zakynthos International Airport "Dionysios Solomos"</name>
+		<latitude>LGZA</latitude>
+		<longitude>GR</longitude>
+	</record>
+	<record>
+		<code>MPU</code>
+		<name>Mapua(Mabua) Airport</name>
+		<latitude>AYMZ</latitude>
+		<longitude>PG</longitude>
+	</record>
+	<record>
+		<code>BED</code>
+		<name>Laurence G Hanscom Field</name>
+		<latitude>KBED</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>OAA</code>
+		<name>Shank Air Base</name>
+		<latitude>OASH</latitude>
+		<longitude>AF</longitude>
+	</record>
+	<record>
+		<code>FID</code>
+		<name>Elizabeth Field</name>
+		<latitude>0B8</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>BNB</code>
+		<name>Boende Airport</name>
+		<latitude>FZGN</latitude>
+		<longitude>CD</longitude>
+	</record>
+	<record>
+		<code>MRT</code>
+		<name>Moroak Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>JCB</code>
+		<name>Santa Terezinha Airport</name>
+		<latitude>SSJA</latitude>
+		<longitude>BR</longitude>
+	</record>
+	<record>
+		<code>BKS</code>
+		<name>Fatmawati Soekarno Airport</name>
+		<latitude>WIGG</latitude>
+		<longitude>ID</longitude>
+	</record>
+	<record>
+		<code>PRZ</code>
+		<name>Prineville Airport</name>
+		<latitude>S39</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>CMY</code>
+		<name>Sparta Fort Mc Coy Airport</name>
+		<latitude>KCMY</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>AHY</code>
+		<name>Ambatolhy Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>MG</longitude>
+	</record>
+	<record>
+		<code>ILL</code>
+		<name>Willmar Municipal -John L Rice Field</name>
+		<latitude>KBDH</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>FFD</code>
+		<name>RAF Fairford</name>
+		<latitude>EGVA</latitude>
+		<longitude>GB</longitude>
+	</record>
+	<record>
+		<code>YTU</code>
+		<name>Tasu Water Aerodrome</name>
+		<latitude>FNBC</latitude>
+		<longitude>CA</longitude>
+	</record>
+	<record>
+		<code>NPL</code>
+		<name>New Plymouth Airport</name>
+		<latitude>NZNP</latitude>
+		<longitude>NZ</longitude>
+	</record>
+	<record>
+		<code>CXP</code>
+		<name>Tunggul Wulung Airport</name>
+		<latitude>WIHL</latitude>
+		<longitude>ID</longitude>
+	</record>
+	<record>
+		<code>AVK</code>
+		<name>Arvaikheer Airport</name>
+		<latitude>ZMAH</latitude>
+		<longitude>MN</longitude>
+	</record>
+	<record>
+		<code>CMY</code>
+		<name>Sparta Fort Mc Coy Airport</name>
+		<latitude>KCMY</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>DUF</code>
+		<name>Pine Island Airport</name>
+		<latitude>7NC2</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>DLF</code>
+		<name>DLF Airport</name>
+		<latitude>KDLF</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>TBK</code>
+		<name>Timber Creek Airport</name>
+		<latitude>YTBR</latitude>
+		<longitude>AU</longitude>
+	</record>
+	<record>
+		<code>GBU</code>
+		<name>Khashm El Girba Airport</name>
+		<latitude>HSKG</latitude>
+		<longitude>SD</longitude>
+	</record>
+	<record>
+		<code>OLJ</code>
+		<name>North West Santo Airport</name>
+		<latitude>NVSZ</latitude>
+		<longitude>VU</longitude>
+	</record>
+	<record>
+		<code>SSY</code>
+		<name>Mbanza Congo Airport</name>
+		<latitude>FNBC</latitude>
+		<longitude>AO</longitude>
+	</record>
+	<record>
+		<code>BDN</code>
+		<name>Talhar Airport</name>
+		<latitude>OPTH</latitude>
+		<longitude>PK</longitude>
+	</record>
+	<record>
+		<code>COU</code>
+		<name>Columbia Regional Airport</name>
+		<latitude>KCOU</latitude>
+		<longitude>US</longitude>
+	</record>
+	<record>
+		<code>AJJ</code>
+		<name>Akjoujt Airport</name>
+		<latitude>GQNJ</latitude>
+		<longitude>MR</longitude>
+	</record>
+	<record>
+		<code>VGO</code>
+		<name>Vigo Airport</name>
+		<latitude>LEVX</latitude>
+		<longitude>ES</longitude>
+	</record>
+	<record>
+		<code>PEE</code>
+		<name>Bolshoye Savino Airport</name>
+		<latitude>USPP</latitude>
+		<longitude>RU</longitude>
+	</record>
+</dataset2>

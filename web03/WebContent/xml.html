@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			$.ajax({
+				url : "data/rank.xml",
+				success : function(doc) {
+					//alert("xml 요청성공" + doc)
+					list = $(doc).find('rank') //find의 결과는 항상 여러개(배열)
+					//alert(list.length)
+					for (i = 0; i < list.length; i++) {
+						//console.log($(list[i]).find('name').text())
+						//console.log($(list[i]).find('tel').text())
+						name = $(list[i]).find('name').text()
+						tel = $(list[i]).find('tel').text()
+						$('#result').append(name + ", " + tel + "<br>")
+
+					}//for
+				}//success
+			})//ajax
+		})//b1
+
+		$('#b2').click(
+				function() {
+					$.ajax({
+						url : "data/rank2.xml",
+						success : function(doc) {
+							//alert("xml 요청성공" + doc)
+							list = $(doc).find('winner') //find의 결과는 항상 여러개(배열)
+							//alert(list.length)
+							for (i = 0; i < list.length; i++) {
+								//console.log($(list[i]).find('name').text())
+								//console.log($(list[i]).find('tel').text())
+								y = $(list[i]).find('year').text()
+								c = $(list[i]).find('class').text()
+								n = $(list[i]).find('name').text()
+								f = $(list[i]).find('field').text()
+								$('#result').append(
+										y + ", " + c + ", " + n + ", " + f
+												+ "<br>")
+
+							}//for
+						}//success
+					})//ajax
+				})//b2
+
+		$('#b3').click(
+				function() {
+					$.ajax({
+						url : "data/dataset.xml",
+						success : function(doc) {
+							//alert("xml 요청성공" + doc)
+							list = $(doc).find('record') //find의 결과는 항상 여러개(배열)
+							//alert(list.length)
+							for (i = 0; i < list.length; i++) {
+								//console.log($(list[i]).find('name').text())
+								//console.log($(list[i]).find('tel').text())
+								id = $(list[i]).find('id').text()
+								first_name = $(list[i]).find('first_name')
+										.text()
+								last_name = $(list[i]).find('last_name').text()
+								email = $(list[i]).find('email').text()
+								gender = $(list[i]).find('gender').text()
+								address = $(list[i]).find('address').text()
+								$('#result').append(
+										id + ", " + first_name + ", "
+												+ last_name + ", " + email
+												+ ", " + gender + ", "
+												+ address + ", " + "<br>")
+								//받은 데이터를 추출해서 db에 저장해두고 싶은 경우
+								//브라우저 -- 웹서버 -- DB
+								//브라우저 받은 데이터를 웹서버에게 전달!
+								//비동기 통신이 필요함.
+								$.ajax({
+									url : "mock.jsp",
+									//async: "false",
+									data : {
+										id : id,
+										first_name : first_name,
+										last_name : last_name,
+										email : email,
+										gender : gender,
+										address : address
+									},
+									success : function() {
+										console.log('넣기 성공~!')
+									} //success
+								})//ajax 
+							}//for
+						}//success
+					})//ajax
+				})//b3
+	})
+</script>
+</head>
+<body style="background: #a3b6d4">
+	<hr>
+	<button id="b1" style="background: #c9757c">XML받아오기-1</button>
+	<hr color="red">
+	<button id="b2" style="background: #c9757c">XML받아오기-2</button>
+	<hr color="red">
+	<button id="b3" style="background: #c9757c">XML받아오기-3</button>
+	<hr color="red">
+	<div id="result"></div>
+
+</body>
+</html>
