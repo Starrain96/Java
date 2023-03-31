@@ -1,7 +1,12 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller //스프링에서 제어하는 역활로 등록
@@ -20,12 +25,14 @@ public class MemberController {
 	// 바로 아래에 있는 메서드가 호출이 될지를
 	// 써주어야 한다.
 	@RequestMapping("login")
-	public String login(MemberVO bag) {
+	public String login(MemberVO bag, HttpSession session) {
 		System.out.println(bag);
 		System.out.println(dao);
 		
 		int result = dao.login(bag);
 		if(result==1) {
+			//로그인에 성공을 하면 세션을 설정하자!
+			session.setAttribute("id", bag.getId());
 			return "ok";
 			} else {
 				//views 아래가 아니고, webapp 아래 member.jsp로 가고 싶은 경우!
@@ -69,8 +76,8 @@ public class MemberController {
 	}
 	
 	@RequestMapping("list")
-	public void list(MemberVO bag) {
-		System.out.println("list 요청됨.");
-		System.out.println(bag);
+	public void list(Model model) {
+		ArrayList<MemberVO> list = dao.list();
+		model.addAttribute("list", list);
 	}
 }
