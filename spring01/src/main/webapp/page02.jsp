@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-body {
-	background: #4287f5;
-}
-</style>
 </head>
 <body>
-	${id}님! 로그인 처리 완료되었습니다.
-	<hr color="red">
-	<img src="resources/img/yes.jpg" width="250" height="250">
+	<%
+	Cookie [] cookies = request.getCookies();
+	for(Cookie c: cookies){
+		if(!c.getName().equals("JSESSIONID")) {
+			out.print(c.getName()+" : "+c.getValue()+"<br>");
+		}
+	}
+	%>
 </body>
 </html>

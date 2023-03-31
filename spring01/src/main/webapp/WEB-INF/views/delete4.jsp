@@ -12,8 +12,8 @@ body {
 </style>
 </head>
 <body>
-	${id}님! 로그인 처리 완료되었습니다.
+<a href="airport.jsp"><button>메인으로</button></a><br>
+    공항 정보 삭제 성공!
 	<hr color="red">
-	<img src="resources/img/yes.jpg" width="250" height="250">
 </body>
 </html>

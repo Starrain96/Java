@@ -36,20 +36,24 @@
 </style>
 </head>
 <body>
+<a href="airport.jsp"><button>메인으로</button></a><br>
 
-	<c:forEach var="dto" items="${list}">
+	<c:forEach var="bag" items="${list}">
 		<table id="customers">
 
-			<th>ID</th>
+			<th>CODE</th>
 			<th>NAME</th>
-			<th>URL</th>
-			<th>IMG</th>
+			<th>LATITUDE</th>
+			<th>LONGITUDE</th>
 			<tr>
-				<td>${dto.id}</td>
-				<td>${dto.name}</td>
-				<td><a href="${dto.url}">바로가기</a></td>
+				<td>${bag.code}</td>
+				<td><a href="one4.multi?code=${bag.code}">${bag.name}</a></td>
+				<td>${bag.latitude}</td>
+				<td>${bag.longitude}</td>
+				
+				<%-- <td><a href="${dto.url}">바로가기</a></td>
 				<td><img alt="" src="resources/img/${dto.img}" width="100"
-					height="100"></td>
+					height="100"></td> --%>
 			</tr>
 		</table>
 		<br>

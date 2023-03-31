@@ -5,6 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function history_back() {
+		history.back();
+	}
+</script>
 <style>
 body {
 	background: #4287f5;
@@ -12,8 +17,9 @@ body {
 </style>
 </head>
 <body>
-	${id}님! 로그인 처리 완료되었습니다.
+<input type="button" value="이전 페이지로" onclick="history_back()">
+
+    공항 등록 성공!
 	<hr color="red">
-	<img src="resources/img/yes.jpg" width="250" height="250">
 </body>
 </html>
