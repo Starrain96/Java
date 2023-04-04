@@ -12,16 +12,31 @@
 <script type="text/javascript">
 	$(function () {
 		$('#b1').click(function () {
+			content = $('#reply').val()
+			writer = "apple"
 			$.ajax({
+				url: "insert4",
 				data:{
-					reply: ${'#reply'}.val()
+					bbsno: ${bag.no},
+					content : content,
+					writer : writer
 				},
-				sucess: function (x) {
-					$('#result').append(x)
+				success: function () {
+					$('#result').append(
+					"<table border=1><tr><td>내용</td><td>작성자</td></tr><tr><td>"
+					+ content +
+					"</td><td>"
+					+ writer +
+					"</td></tr></table><br>")
+					$('#reply').val('')
 				}
 			})
 		})
 	})
+	
+	function history_back() {
+		history.back();
+	}
 </script>
 <style>
 body {
@@ -30,28 +45,26 @@ body {
 </style>
 </head>
 <body>
-	<a href="bbs.jsp">처음페이지로</a>
-	<a href="list2.jsp">게시물 전체 목록페이지</a>
+	<a href="ajax_test2.jsp"><button>메인으로</button></a><br>
+<input type="button" value="이전 페이지로" onclick="history_back()">
 	<hr color="red">
-	번호 : ${bag.no};
-	<br> 제목 : ${bag.title};
-	<br> 내용 : ${bag.content};
-	<br> 작성자 : ${bag.writer};
-	<br> 댓글 달기 :
-	<input id="reply">
-	<button id="b1">댓글달기</button>
+	번호 : ${bag.no}
+	<br> 제목 : ${bag.title}
+	<br> 내용 : ${bag.content}
+	<br> 작성자 : ${bag.writer}
+	<br> 댓글 달기 : <input id="reply">
+	<button id="b1">댓글달기</button><br>
+	<a href="update41.jsp?no=${bag.no}&content=${bag.content}"><button>수정하기</button></a>
+	<a href="delete41.jsp?no=${bag.no}"><button>삭제하기</button></a>
+	<hr color = red>
 	<div id="result">
 	<c:forEach items="${list}" var="bag">
 	<table border=1>
 	<tr>
-	<td>번호</td>
-	<td>게시글번호</td>
 	<td>내용</td>
 	<td>작성자</td>
 	</tr>
 	<tr>
-	<td>${bag.no}</td>
-	<td>${bag.bbsno}</td>
 	<td>${bag.content}</td>
 	<td>${bag.writer}</td>
 	</tr>
