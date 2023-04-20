@@ -19,6 +19,9 @@
 		where id = #{id}
 	</select>
 	
+	<select id="list" resultType="memberVO">
+		select * from member
+	</select>
 </mapper>
 
 

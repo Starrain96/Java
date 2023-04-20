@@ -1,6 +1,7 @@
 package com.multi.mvc901;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -66,6 +67,12 @@ public class MemberController {
 		System.out.println("insert 요청됨.");
 		MemberVO bag = dao.one(id);
 		model.addAttribute("bag", bag);
+	}
+	
+	@RequestMapping("list")
+	public void one(Model model) {
+		List<MemberVO> list = dao.list();
+		model.addAttribute("list", list);
 	}
 	
 

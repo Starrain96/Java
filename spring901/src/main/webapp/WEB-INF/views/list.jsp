@@ -18,24 +18,24 @@ body {
 <body>
 <div class="container mt-3">
   <h2>회원 정보</h2>
-  <p>회원 정보와 선호음식 리스트입니다.</p>            
+  <p>회원 정보 리스트입니다.</p>            
   <table class="table table-dark">
     <thead>
       <tr>
         <th>아이디</th>
         <th>비밀번호</th>
         <th>이름</th>
-        <th>선호 음식</th>
+        <th>전화 번호</th>
       </tr>
     </thead>
-	<c:forEach items="${ list}" var="bag">
+	<c:forEach items="${list}" var="list">
 		<hr color="red">
 	<tbody>
       <tr>
-        <td>${bag.id}</td>
-        <td>${bag.pw}</td>
-        <td>${bag.name}</td>
-        <td>${bag.favorite}</td>
+        <td>${list.id}</td>
+        <td>${list.pw}</td>
+        <td>${list.name}</td>
+        <td>${list.tel}</td>
       </tr>
     </tbody>
 	</c:forEach>
